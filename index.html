@@ -1,700 +1,393 @@
 <!DOCTYPE html>
-<html>
+<html lang="sl">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 26.2.6.3 (Linux)"/>
-	<meta name="created" content="2026-10-22T12:14:36.370366863"/>
-	<meta name="changed" content="2026-10-22T12:15:20.368665065"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalki v slovenskem jeziku — Bogdan Kristofer Meško</title>
+<style>
+  :root {
+    --bordo: #6b1f2a;
+    --bordo-svetel: #8a2b39;
+    --temno: #1a1a1a;
+    --sivo: #555;
+    --svetlo-sivo: #f5f2ed;
+    --belo: #ffffff;
+    --zlata: #c9a961;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--temno);
+    background: var(--belo);
+    line-height: 1.65;
+    font-size: 17px;
+  }
+
+  .vsebnik {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header {
+    background: var(--bordo);
+    color: var(--belo);
+    padding: 60px 0 50px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 2.6rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    font-weight: normal;
+  }
+
+  header .avtor {
+    font-size: 1.1rem;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 28px;
+  }
+
+  .omejitev {
+    display: inline-block;
+    background: var(--zlata);
+    color: var(--temno);
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+  }
+
+  .cena {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+  }
+
+  .cena strong { font-size: 1.8rem; }
+
+  .redna {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+
+  .gumb {
+    display: inline-block;
+    background: var(--zlata);
+    color: var(--temno);
+    text-decoration: none;
+    padding: 16px 42px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: inherit;
+  }
+
+  .gumb:hover { background: #d9bc7a; }
+
+  .rok {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+
+  section {
+    padding: 60px 0;
+    border-bottom: 1px solid #e5e0d8;
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-size: 1.8rem;
+    color: var(--bordo);
+    margin-bottom: 24px;
+    font-weight: normal;
+    border-bottom: 2px solid var(--zlata);
+    display: inline-block;
+    padding-bottom: 6px;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    color: var(--bordo);
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  p { margin-bottom: 16px; }
+
+  ul { margin: 12px 0 16px 24px; }
+  li { margin-bottom: 8px; }
+
+  .kazalo-del {
+    background: var(--svetlo-sivo);
+    border-left: 4px solid var(--bordo);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .kazalo-del h3 { margin-top: 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e0d8;
+    vertical-align: top;
+  }
+
+  th {
+    color: var(--bordo);
+    font-weight: normal;
+    width: 38%;
+    font-style: italic;
+  }
+
+  tr:nth-child(even) { background: var(--svetlo-sivo); }
+
+  .faq-vprasanje {
+    background: var(--svetlo-sivo);
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+
+  .faq-vprasanje h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.08rem;
+  }
+
+  .faq-vprasanje p:last-child { margin-bottom: 0; }
+
+  .obrazec-sekcija {
+    background: var(--svetlo-sivo);
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .obrazec-sekcija h2 { border-bottom: none; }
+
+  .poudarek {
+    font-size: 1.2rem;
+    color: var(--bordo);
+    font-weight: bold;
+    margin: 20px 0;
+  }
+
+  .opomba {
+    font-size: 0.92rem;
+    color: var(--sivo);
+    margin-top: 18px;
+  }
+
+  .kontakt-podatki {
+    background: var(--svetlo-sivo);
+    padding: 24px 28px;
+    border-radius: 6px;
+    margin-top: 16px;
+  }
+
+  .kontakt-podatki p { margin-bottom: 8px; }
+  .kontakt-podatki strong { color: var(--bordo); }
+
+  footer {
+    background: var(--temno);
+    color: #aaa;
+    text-align: center;
+    padding: 36px 24px;
+    font-size: 0.88rem;
+  }
+
+  footer a { color: var(--zlata); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.9rem; }
+    header { padding: 40px 0 36px; }
+    section { padding: 44px 0; }
+    h2 { font-size: 1.45rem; }
+    body { font-size: 16px; }
+    .gumb { padding: 14px 32px; font-size: 1rem; }
+    th { width: 45%; }
+    .kontakt-podatki { padding: 20px 18px; }
+  }
+
+  html { scroll-behavior: smooth; }
+</style>
 </head>
-<body lang="en-US" dir="ltr"><p>&lt;!DOCTYPE html&gt;</p>
-<p>&lt;html lang=&quot;sl&quot;&gt;</p>
-<p>&lt;head&gt;</p>
-<p>&lt;meta charset=&quot;UTF-8&quot;&gt;</p>
-<p>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
-initial-scale=1.0&quot;&gt;</p>
-<p>&lt;title&gt;Kalki v slovenskem jeziku — Bogdan Kristofer
-Meško&lt;/title&gt;</p>
-<p>&lt;style&gt;</p>
-<p>  :root {</p>
-<p>    --bordo: #6b1f2a;</p>
-<p>    --bordo-svetel: #8a2b39;</p>
-<p>    --temno: #1a1a1a;</p>
-<p>    --sivo: #555;</p>
-<p>    --svetlo-sivo: #f5f2ed;</p>
-<p>    --belo: #ffffff;</p>
-<p>    --zlata: #c9a961;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+<body>
 
-</p>
-<p>  * { margin: 0; padding: 0; box-sizing: border-box; }</p>
-<p><br/>
-<br/>
+<header>
+  <div class="vsebnik">
+    <h1>Kalki v slovenskem jeziku</h1>
+    <p class="avtor">Bogdan Kristofer Meško</p>
+    <div class="omejitev">Prva naklada je omejena na 100 izvodov</div>
+    <p class="cena">Cena za naročnike prve naklade: <strong>30 €</strong></p>
+    <p class="redna">378 strani · format A4 · redna cena 40 € — prihranite 10 €</p>
+    <a href="#narocilo" class="gumb">Naročim izvod</a>
+    <p class="rok">Knjiga gre v tisk v dveh tednih in bo natisnjena pred koncem novembra 2026.<br>Rok za naročila: 1. 12. 2026 ali do razprodaje — kar nastopi prej.</p>
+  </div>
+</header>
 
-</p>
-<p>  body {</p>
-<p>    font-family: Georgia, 'Times New Roman', serif;</p>
-<p>    color: var(--temno);</p>
-<p>    background: var(--belo);</p>
-<p>    line-height: 1.65;</p>
-<p>    font-size: 17px;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+<section id="o-knjigi">
+  <div class="vsebnik">
+    <h2>O knjigi</h2>
+    <p><em>Kalki v slovenskem jeziku</em> je obsežno delo (378 strani, format A4) o jezikovnih kalkih — sledeh, ki so jih v slovenščino vtisnili tisočletni stiki z drugimi kulturami in jeziki. Knjiga razvija integralno teorijo indogenih jezikov, ki slovenski jezik postavi v središče starodavne jezikovne mreže, ki je segala od Indije prek Perzije, Anatolije in Balkana vse do zahodne Evrope.</p>
+    <p>V treh delih — <strong>Džñāna</strong> (znanje), <strong>Viveka</strong> (razločevanje) in <strong>Krijā</strong> (delovanje) — knjiga postopoma razgrinja:</p>
+    <ul>
+      <li>kako so nastajali <strong>pojmovni, strukturni in duhovni kalki</strong>;</li>
+      <li>zakaj so <strong>vedski prakrti</strong> delovali kot lingua franca starega sveta;</li>
+      <li>kako se v slovenščini ohranjajo <strong>dvojina, korenski sistem, sandhi in arhaične glasovne prvine</strong>;</li>
+      <li>kako so se <strong>mitološke strukture</strong> preslikavale iz Indije v Anatolijo, na Balkan in v Evropo;</li>
+      <li>in zakaj je <strong>slovenski jezik</strong> eden najbolj arhaičnih indogenih jezikov.</li>
+    </ul>
+    <p>Knjiga ni le jezikoslovna razprava. Je tudi filozofsko in duhovno potovanje skozi besede, mite in obrede, ki so oblikovali naš jezik in naš pogled na svet.</p>
+  </div>
+</section>
 
-</p>
-<p>  .vsebnik {</p>
-<p>    max-width: 820px;</p>
-<p>    margin: 0 auto;</p>
-<p>    padding: 0 24px;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+<section id="kazalo">
+  <div class="vsebnik">
+    <h2>Kaj najdete v knjigi</h2>
 
-</p>
-<p>  /* GLAVA */</p>
-<p>  header {</p>
-<p>    background: var(--bordo);</p>
-<p>    color: var(--belo);</p>
-<p>    padding: 60px 0 50px;</p>
-<p>    text-align: center;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+    <div class="kazalo-del">
+      <h3>1. DŽÑĀNA (znanje)</h3>
+      <p>Kalk, jezik in politika, ideološki kalki, kratka zgodovina sodobnega jezikoslovja, kritika PIE teorije.</p>
+    </div>
 
-</p>
-<p>  header h1 {</p>
-<p>    font-size: 2.6rem;</p>
-<p>    letter-spacing: 0.5px;</p>
-<p>    margin-bottom: 8px;</p>
-<p>    font-weight: normal;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+    <div class="kazalo-del">
+      <h3>2. VIVEKA (razločevanje)</h3>
+      <p>Duhovni kalki: Anatolija in Balkan, Starčevo in Vinča, Trakija in Frigija, Kreta in Ciper, Baski, Kelti, Etruščani, Mitani, Elam, Sumer, Egipt, Fenicija, Arabija. Strukturni kalki: nikalnice, zaimki, vprašalnice, številke, dvojina, predpone, sandhi. Pojmovni kalki: imena rek, ilirščina, ladinščina, semitizmi.</p>
+    </div>
 
-</p>
-<p>  header .avtor {</p>
-<p>    font-size: 1.1rem;</p>
-<p>    font-style: italic;</p>
-<p>    opacity: 0.9;</p>
-<p>    margin-bottom: 28px;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+    <div class="kazalo-del">
+      <h3>3. KRIJĀ (delovanje)</h3>
+      <p>Ṛta — vesoljni red, integralna teorija indogenih jezikov, vedski koine, Sarasvati, Kalki in njegovi odsevi v slovenskem izročilu (Kralj Matjaž, Kresnik, Kurent).</p>
+    </div>
 
-</p>
-<p>  .omejitev {</p>
-<p>    display: inline-block;</p>
-<p>    background: var(--zlata);</p>
-<p>    color: var(--temno);</p>
-<p>    padding: 8px 20px;</p>
-<p>    border-radius: 4px;</p>
-<p>    font-size: 0.95rem;</p>
-<p>    font-weight: bold;</p>
-<p>    letter-spacing: 0.5px;</p>
-<p>    margin-bottom: 24px;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+    <div class="kazalo-del">
+      <h3>Priloge</h3>
+      <p>21 tabel s primerjavami (sanskrt–sumerščina, sanskrt–elamščina, sanskrt–egipčanščina, hetitsko–slovenske vzporednice, sanskrtsko–armenske primerjave, sanskrtsko–frigijske primerjave, slovensko–egipčanske primerjave, sumersko–slovenske vzporednice in druge).</p>
+    </div>
+  </div>
+</section>
 
-</p>
-<p>  .cena {</p>
-<p>    font-size: 1.3rem;</p>
-<p>    margin-bottom: 6px;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+<section id="o-avtorju">
+  <div class="vsebnik">
+    <h2>O avtorju</h2>
+    <p><strong>Bogdan Kristofer Meško</strong> se že več kot četrt stoletja ukvarja s primerjavo slovenskega jezika in sanskrta. Pri tem ga je vzpodbujal prof. Janez Orešnik z Oddelka za primerjalno in splošno jezikoslovje Filozofske fakultete v Ljubljani, ki je to področje označil za raziskovanja vredno, a v naši akademski klimi žal »tabuizirano«. K vztrajanju sta ga spodbujala tudi prof. Zmago Šmitek in založnik Peter Amalietti.</p>
+    <p>Knjiga <em>Kalki v slovenskem jeziku</em> je sad tega dolgoletnega dela. V njej se prepletajo jezikoslovje, mitologija, arheologija, genetika in filozofija — v celostno pripoved o izvoru slovenskega jezika in njegovem mestu v starodavnem svetu.</p>
+    <p style="font-style: italic; color: #6b1f2a; border-left: 3px solid #c9a961; padding-left: 18px; margin-top: 24px;">»V tem smislu to besedilo ni 'moje'. Je sled nečesa, kar je bilo vedno tu. In kar bo ostalo tudi potem, ko bo to besedilo pozabljeno.«</p>
+  </div>
+</section>
 
-</p>
-<p>  .cena strong { font-size: 1.8rem; }</p>
-<p><br/>
-<br/>
+<section id="podatki">
+  <div class="vsebnik">
+    <h2>Podatki o izdaji</h2>
+    <table>
+      <tr><th>Naslov</th><td>Kalki v slovenskem jeziku</td></tr>
+      <tr><th>Avtor</th><td>Bogdan Kristofer Meško</td></tr>
+      <tr><th>Založba</th><td>samozaložba</td></tr>
+      <tr><th>Format</th><td>A4</td></tr>
+      <tr><th>Obseg</th><td>378 strani</td></tr>
+      <tr><th>Prva naklada</th><td>100 izvodov</td></tr>
+      <tr><th>Predviden izid</th><td>konec novembra 2026</td></tr>
+      <tr><th>Cena v prednaročilu</th><td><strong>30 €</strong></td></tr>
+      <tr><th>Redna cena</th><td>40 €</td></tr>
+      <tr><th>Plačilni rok</th><td>30 dni od potrditve naročila</td></tr>
+      <tr><th>Dostava</th><td>osebni prevzem ali po pošti (+ poštnina)</td></tr>
+    </table>
+  </div>
+</section>
 
-</p>
-<p>  .redna {</p>
-<p>    font-size: 0.95rem;</p>
-<p>    opacity: 0.85;</p>
-<p>    margin-bottom: 28px;</p>
-<p>    font-style: italic;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+<section id="faq">
+  <div class="vsebnik">
+    <h2>Pogosta vprašanja</h2>
 
-</p>
-<p>  .gumb {</p>
-<p>    display: inline-block;</p>
-<p>    background: var(--zlata);</p>
-<p>    color: var(--temno);</p>
-<p>    text-decoration: none;</p>
-<p>    padding: 16px 42px;</p>
-<p>    font-size: 1.1rem;</p>
-<p>    font-weight: bold;</p>
-<p>    border-radius: 4px;</p>
-<p>    border: none;</p>
-<p>    cursor: pointer;</p>
-<p>    transition: background 0.2s;</p>
-<p>    font-family: inherit;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+    <div class="faq-vprasanje">
+      <h3>Kdaj bom prejel knjigo?</h3>
+      <p>Knjiga gre v tisk v dveh tednih in bo natisnjena pred koncem novembra 2026. Odprema sledi takoj po tisku — predvidoma v začetku decembra 2026.</p>
+    </div>
 
-</p>
-<p>  .gumb:hover { background: #d9bc7a; }</p>
-<p><br/>
-<br/>
+    <div class="faq-vprasanje">
+      <h3>Kdaj moram plačati?</h3>
+      <p>Naročilo je zavezujoče. Račun prejmete po potrditvi naročila, rok plačila pa je <strong>30 dni</strong>. Če želite, lahko poravnate tudi takoj — s tem si zagotovite, da ne pozabite.</p>
+    </div>
 
-</p>
-<p>  .rok {</p>
-<p>    margin-top: 18px;</p>
-<p>    font-size: 0.9rem;</p>
-<p>    opacity: 0.85;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+    <div class="faq-vprasanje">
+      <h3>Zakaj je naklada omejena na 100 izvodov?</h3>
+      <p>Knjiga izhaja v samozaložbi. Prva naklada je majhna, ker tisk v majhnih količinah ni poceni in ker želimo preveriti zanimanje pred morebitnim ponatisom. Če bo prva naklada razprodana, bo drugi natis sledil šele, ko bo dovolj povpraševanja — zato je zdaj najboljši trenutek za naročilo.</p>
+    </div>
 
-</p>
-<p>  /* SEKCIJE */</p>
-<p>  section {</p>
-<p>    padding: 60px 0;</p>
-<p>    border-bottom: 1px solid #e5e0d8;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+    <div class="faq-vprasanje">
+      <h3>Ali lahko naročim več izvodov?</h3>
+      <p>Da, največ 5 izvodov na naročnika, dokler je zaloga. Za večje količine (npr. za knjižnice, šole, društva) nas kontaktirajte.</p>
+    </div>
 
-</p>
-<p>  section:last-of-type { border-bottom: none; }</p>
-<p><br/>
-<br/>
+    <div class="faq-vprasanje">
+      <h3>Kaj če si premislim?</h3>
+      <p>Naročilo je zavezujoče, a če knjiga ne bi izšla do 31. 12. 2026, vam plačilo vrnemo v celoti. Za druge primere se obrnite na nas — poskušali bomo najti rešitev.</p>
+    </div>
 
-</p>
-<p>  h2 {</p>
-<p>    font-size: 1.8rem;</p>
-<p>    color: var(--bordo);</p>
-<p>    margin-bottom: 24px;</p>
-<p>    font-weight: normal;</p>
-<p>    border-bottom: 2px solid var(--zlata);</p>
-<p>    display: inline-block;</p>
-<p>    padding-bottom: 6px;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+    <div class="faq-vprasanje">
+      <h3>Ali je knjiga na voljo v knjigarnah?</h3>
+      <p>Ne. Knjiga izhaja v samozaložbi in je na voljo le prek te strani oziroma neposredno pri avtorju.</p>
+    </div>
 
-</p>
-<p>  h3 {</p>
-<p>    font-size: 1.15rem;</p>
-<p>    color: var(--bordo);</p>
-<p>    margin-top: 24px;</p>
-<p>    margin-bottom: 8px;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+    <div class="faq-vprasanje">
+      <h3>Kako lahko pomagam, če ne morem naročiti?</h3>
+      <p>Delite povezavo do te strani z nekom, ki bi ga knjiga zanimala. Beseda od ust do ust je pri samozaložbi najmočnejša podpora.</p>
+    </div>
+  </div>
+</section>
 
-</p>
-<p>  p { margin-bottom: 16px; }</p>
-<p><br/>
-<br/>
+<section id="narocilo" class="obrazec-sekcija">
+  <div class="vsebnik">
+    <h2>Naročilo prve naklade</h2>
+    <p>Naročilo oddate prek spletnega obrazca. Izpolnite ga v nekaj minutah — plačilo sledi po potrditvi naročila z 30-dnevnim rokom.</p>
+    <p class="poudarek">Prva naklada: 100 izvodov. Do 1. 12. 2026 ali do razprodaje.</p>
 
-</p>
-<p>  ul { margin: 12px 0 16px 24px; }</p>
-<p>  li { margin-bottom: 8px; }</p>
-<p><br/>
-<br/>
+    <a href="[POVEZAVA_DO_OBRAZCA]" class="gumb" target="_blank" rel="noopener">Odpri obrazec za naročilo</a>
 
-</p>
-<p>  /* KAZALO */</p>
-<p>  .kazalo-del {</p>
-<p>    background: var(--svetlo-sivo);</p>
-<p>    border-left: 4px solid var(--bordo);</p>
-<p>    padding: 20px 24px;</p>
-<p>    margin-bottom: 20px;</p>
-<p>    border-radius: 0 6px 6px 0;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+    <p class="opomba">Če raje naročite po e-pošti ali pošti, lahko izpolnjen PDF obrazec pošljete na <strong>7bodhi@gmail.com</strong> ali na naslov <strong>[poštni naslov]</strong>. PDF obrazec si lahko prenesete tukaj: <a href="obrazec.pdf" style="color: #6b1f2a;">prenos PDF</a>.</p>
+  </div>
+</section>
 
-</p>
-<p>  .kazalo-del h3 { margin-top: 0; }</p>
-<p><br/>
-<br/>
+<section id="kontakt">
+  <div class="vsebnik">
+    <h2>Kontakt</h2>
+    <p>Za vprašanja, dodatne informacije ali večje količine:</p>
+    <div class="kontakt-podatki">
+      <p><strong>E-pošta:</strong> 7bodhi@gmail.com</p>
+      <p><strong>Telefon:</strong> [telefon — neobvezno]</p>
+      <p><strong>Naslov:</strong> [poštni naslov]</p>
+    </div>
+    <p class="opomba">Odgovarjamo v 24–48 urah.</p>
+  </div>
+</section>
 
-</p>
-<p>  /* PODATKI O IZDAJI */</p>
-<p>  table {</p>
-<p>    width: 100%;</p>
-<p>    border-collapse: collapse;</p>
-<p>    margin-top: 12px;</p>
-<p>  }</p>
-<p><br/>
-<br/>
+<footer>
+  <p><strong>Kalki v slovenskem jeziku</strong> · Bogdan Kristofer Meško · © 2026</p>
+  <p style="margin-top: 10px;"><a href="zasebnost.html">Politika zasebnosti</a> · <a href="pogoji.html">Pogoji naročila</a></p>
+  <p style="margin-top: 14px; font-size: 0.82rem;">Spletna stran je nastala v samozaložbi. Hvala za vašo podporo.</p>
+</footer>
 
-</p>
-<p>  th, td {</p>
-<p>    text-align: left;</p>
-<p>    padding: 12px 16px;</p>
-<p>    border-bottom: 1px solid #e5e0d8;</p>
-<p>    vertical-align: top;</p>
-<p>  }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  th {</p>
-<p>    color: var(--bordo);</p>
-<p>    font-weight: normal;</p>
-<p>    width: 38%;</p>
-<p>    font-style: italic;</p>
-<p>  }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  tr:nth-child(even) { background: var(--svetlo-sivo); }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  /* FAQ */</p>
-<p>  .faq-vprasanje {</p>
-<p>    background: var(--svetlo-sivo);</p>
-<p>    border-radius: 6px;</p>
-<p>    padding: 20px 24px;</p>
-<p>    margin-bottom: 16px;</p>
-<p>  }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  .faq-vprasanje h3 {</p>
-<p>    margin-top: 0;</p>
-<p>    margin-bottom: 10px;</p>
-<p>    font-size: 1.08rem;</p>
-<p>  }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  .faq-vprasanje p:last-child { margin-bottom: 0; }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  /* OBRAZEC */</p>
-<p>  .obrazec-sekcija {</p>
-<p>    background: var(--svetlo-sivo);</p>
-<p>    text-align: center;</p>
-<p>    padding: 60px 0;</p>
-<p>  }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  .obrazec-sekcija h2 { border-bottom: none; }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  .poudarek {</p>
-<p>    font-size: 1.2rem;</p>
-<p>    color: var(--bordo);</p>
-<p>    font-weight: bold;</p>
-<p>    margin: 20px 0;</p>
-<p>  }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  .opomba {</p>
-<p>    font-size: 0.92rem;</p>
-<p>    color: var(--sivo);</p>
-<p>    margin-top: 18px;</p>
-<p>  }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  /* KONTAKT */</p>
-<p>  .kontakt-podatki {</p>
-<p>    background: var(--svetlo-sivo);</p>
-<p>    padding: 24px 28px;</p>
-<p>    border-radius: 6px;</p>
-<p>    margin-top: 16px;</p>
-<p>  }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  .kontakt-podatki p { margin-bottom: 8px; }</p>
-<p>  .kontakt-podatki strong { color: var(--bordo); }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  /* FOOTER */</p>
-<p>  footer {</p>
-<p>    background: var(--temno);</p>
-<p>    color: #aaa;</p>
-<p>    text-align: center;</p>
-<p>    padding: 36px 24px;</p>
-<p>    font-size: 0.88rem;</p>
-<p>  }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  footer a { color: var(--zlata); text-decoration: none; }</p>
-<p>  footer a:hover { text-decoration: underline; }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  /* ODZIVNOST */</p>
-<p>  @media (max-width: 600px) {</p>
-<p>    header h1 { font-size: 1.9rem; }</p>
-<p>    header { padding: 40px 0 36px; }</p>
-<p>    section { padding: 44px 0; }</p>
-<p>    h2 { font-size: 1.45rem; }</p>
-<p>    body { font-size: 16px; }</p>
-<p>    .gumb { padding: 14px 32px; font-size: 1rem; }</p>
-<p>    th { width: 45%; }</p>
-<p>    .kontakt-podatki { padding: 20px 18px; }</p>
-<p>  }</p>
-<p><br/>
-<br/>
-
-</p>
-<p>  /* GLADKO DRsENJE */</p>
-<p>  html { scroll-behavior: smooth; }</p>
-<p>&lt;/style&gt;</p>
-<p>&lt;/head&gt;</p>
-<p>&lt;body&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>&lt;!-- GLAVA --&gt;</p>
-<p>&lt;header&gt;</p>
-<p>  &lt;div class=&quot;vsebnik&quot;&gt;</p>
-<p>    &lt;h1&gt;Kalki v slovenskem jeziku&lt;/h1&gt;</p>
-<p>    &lt;p class=&quot;avtor&quot;&gt;Bogdan Kristofer Meško&lt;/p&gt;</p>
-<p>    &lt;div class=&quot;omejitev&quot;&gt;Prva naklada je omejena
-na 100 izvodov&lt;/div&gt;</p>
-<p>    &lt;p class=&quot;cena&quot;&gt;Cena za naročnike prve
-naklade: &lt;strong&gt;30 €&lt;/strong&gt;&lt;/p&gt;</p>
-<p>    &lt;p class=&quot;redna&quot;&gt;redna cena 40 € —
-prihranite 10 €&lt;/p&gt;</p>
-<p>    &lt;a href=&quot;#narocilo&quot; class=&quot;gumb&quot;&gt;Naročim
-izvod&lt;/a&gt;</p>
-<p>    &lt;p class=&quot;rok&quot;&gt;Knjiga gre v tisk v dveh tednih
-in bo natisnjena pred koncem novembra 2026.&lt;br&gt;Rok za naročila:
-[datum] ali do razprodaje — kar nastopi prej.&lt;/p&gt;</p>
-<p>  &lt;/div&gt;</p>
-<p>&lt;/header&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>&lt;!-- O KNJIGI --&gt;</p>
-<p>&lt;section id=&quot;o-knjigi&quot;&gt;</p>
-<p>  &lt;div class=&quot;vsebnik&quot;&gt;</p>
-<p>    &lt;h2&gt;O knjigi&lt;/h2&gt;</p>
-<p>    &lt;p&gt;&lt;em&gt;Kalki v slovenskem jeziku&lt;/em&gt; je
-obsežno delo o jezikovnih kalkih — sledeh, ki so jih v slovenščino
-vtisnili tisočletni stiki z drugimi kulturami in jeziki. Knjiga
-razvija integralno teorijo indogenih jezikov, ki slovenski jezik
-postavi v središče starodavne jezikovne mreže, ki je segala od
-Indije prek Perzije, Anatolije in Balkana vse do zahodne Evrope.&lt;/p&gt;</p>
-<p>    &lt;p&gt;V treh delih — &lt;strong&gt;Džñāna&lt;/strong&gt;
-(znanje), &lt;strong&gt;Viveka&lt;/strong&gt; (razločevanje) in
-&lt;strong&gt;Krijā&lt;/strong&gt; (delovanje) — knjiga postopoma
-razgrinja:&lt;/p&gt;</p>
-<p>    &lt;ul&gt;</p>
-<p>      &lt;li&gt;kako so nastajali &lt;strong&gt;pojmovni,
-strukturni in duhovni kalki&lt;/strong&gt;;&lt;/li&gt;</p>
-<p>      &lt;li&gt;zakaj so &lt;strong&gt;vedski prakrti&lt;/strong&gt;
-delovali kot lingua franca starega sveta;&lt;/li&gt;</p>
-<p>      &lt;li&gt;kako se v slovenščini ohranjajo &lt;strong&gt;dvojina,
-korenski sistem, sandhi in arhaične glasovne prvine&lt;/strong&gt;;&lt;/li&gt;</p>
-<p>      &lt;li&gt;kako so se &lt;strong&gt;mitološke
-strukture&lt;/strong&gt; preslikavale iz Indije v Anatolijo, na
-Balkan in v Evropo;&lt;/li&gt;</p>
-<p>      &lt;li&gt;in zakaj je &lt;strong&gt;slovenski jezik&lt;/strong&gt;
-eden najbolj arhaičnih indogenih jezikov.&lt;/li&gt;</p>
-<p>    &lt;/ul&gt;</p>
-<p>    &lt;p&gt;Knjiga ni le jezikoslovna razprava. Je tudi
-filozofsko in duhovno potovanje skozi besede, mite in obrede, ki so
-oblikovali naš jezik in naš pogled na svet.&lt;/p&gt;</p>
-<p>  &lt;/div&gt;</p>
-<p>&lt;/section&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>&lt;!-- KAZALO --&gt;</p>
-<p>&lt;section id=&quot;kazalo&quot;&gt;</p>
-<p>  &lt;div class=&quot;vsebnik&quot;&gt;</p>
-<p>    &lt;h2&gt;Kaj najdete v knjigi&lt;/h2&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;div class=&quot;kazalo-del&quot;&gt;</p>
-<p>      &lt;h3&gt;1. DŽÑĀNA (znanje)&lt;/h3&gt;</p>
-<p>      &lt;p&gt;Kalk, jezik in politika, ideološki kalki, kratka
-zgodovina sodobnega jezikoslovja, kritika PIE teorije.&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;div class=&quot;kazalo-del&quot;&gt;</p>
-<p>      &lt;h3&gt;2. VIVEKA (razločevanje)&lt;/h3&gt;</p>
-<p>      &lt;p&gt;Duhovni kalki: Anatolija in Balkan, Starčevo in
-Vinča, Trakija in Frigija, Kreta in Ciper, Baski, Kelti, Etruščani,
-Mitani, Elam, Sumer, Egipt, Fenicija, Arabija. Strukturni kalki:
-nikalnice, zaimki, vprašalnice, številke, dvojina, predpone,
-sandhi. Pojmovni kalki: imena rek, ilirščina, ladinščina,
-semitizmi.&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;div class=&quot;kazalo-del&quot;&gt;</p>
-<p>      &lt;h3&gt;3. KRIJĀ (delovanje)&lt;/h3&gt;</p>
-<p>      &lt;p&gt;Ṛta — vesoljni red, integralna teorija
-indogenih jezikov, vedski koine, Sarasvati, Kalki in njegovi odsevi v
-slovenskem izročilu (Kralj Matjaž, Kresnik, Kurent).&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;div class=&quot;kazalo-del&quot;&gt;</p>
-<p>      &lt;h3&gt;Priloge&lt;/h3&gt;</p>
-<p>      &lt;p&gt;21 tabel s primerjavami (sanskrt–sumerščina,
-sanskrt–elamščina, sanskrt–egipčanščina, hetitsko–slovenske
-vzporednice, sanskrtsko–armenske primerjave, sanskrtsko–frigijske
-primerjave, slovensko–egipčanske primerjave, sumersko–slovenske
-vzporednice in druge).&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p>  &lt;/div&gt;</p>
-<p>&lt;/section&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>&lt;!-- O AVTORJU --&gt;</p>
-<p>&lt;section id=&quot;o-avtorju&quot;&gt;</p>
-<p>  &lt;div class=&quot;vsebnik&quot;&gt;</p>
-<p>    &lt;h2&gt;O avtorju&lt;/h2&gt;</p>
-<p>    &lt;p&gt;&lt;strong&gt;Bogdan Kristofer Meško&lt;/strong&gt;
-se že več kot četrt stoletja ukvarja s primerjavo slovenskega
-jezika in sanskrta. Pri tem ga je vzpodbujal prof. Janez Orešnik z
-Oddelka za primerjalno in splošno jezikoslovje Filozofske fakultete
-v Ljubljani, ki je to področje označil za raziskovanja vredno, a v
-naši akademski klimi žal »tabuizirano«. K vztrajanju sta ga
-spodbujala tudi prof. Zmago Šmitek in založnik Peter Amalietti.&lt;/p&gt;</p>
-<p>    &lt;p&gt;Knjiga &lt;em&gt;Kalki v slovenskem jeziku&lt;/em&gt;
-je sad tega dolgoletnega dela. V njej se prepletajo jezikoslovje,
-mitologija, arheologija, genetika in filozofija — v celostno
-pripoved o izvoru slovenskega jezika in njegovem mestu v starodavnem
-svetu.&lt;/p&gt;</p>
-<p>    &lt;p style=&quot;font-style: italic; color: #6b1f2a;
-border-left: 3px solid #c9a961; padding-left: 18px; margin-top:
-24px;&quot;&gt;»V tem smislu to besedilo ni 'moje'. Je sled nečesa,
-kar je bilo vedno tu. In kar bo ostalo tudi potem, ko bo to besedilo
-pozabljeno.«&lt;/p&gt;</p>
-<p>  &lt;/div&gt;</p>
-<p>&lt;/section&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>&lt;!-- PODATKI O IZDAJI --&gt;</p>
-<p>&lt;section id=&quot;podatki&quot;&gt;</p>
-<p>  &lt;div class=&quot;vsebnik&quot;&gt;</p>
-<p>    &lt;h2&gt;Podatki o izdaji&lt;/h2&gt;</p>
-<p>    &lt;table&gt;</p>
-<p>      &lt;tr&gt;&lt;th&gt;Naslov&lt;/th&gt;&lt;td&gt;Kalki v
-slovenskem jeziku&lt;/td&gt;&lt;/tr&gt;</p>
-<p>      &lt;tr&gt;&lt;th&gt;Avtor&lt;/th&gt;&lt;td&gt;Bogdan
-Kristofer Meško&lt;/td&gt;&lt;/tr&gt;</p>
-<p>      &lt;tr&gt;&lt;th&gt;Založba&lt;/th&gt;&lt;td&gt;samozaložba&lt;/td&gt;&lt;/tr&gt;</p>
-<p>      &lt;tr&gt;&lt;th&gt;Prva naklada&lt;/th&gt;&lt;td&gt;100
-izvodov&lt;/td&gt;&lt;/tr&gt;</p>
-<p>      &lt;tr&gt;&lt;th&gt;Predviden izid&lt;/th&gt;&lt;td&gt;konec
-novembra 2026&lt;/td&gt;&lt;/tr&gt;</p>
-<p>      &lt;tr&gt;&lt;th&gt;Cena v prednaročilu&lt;/th&gt;&lt;td&gt;&lt;strong&gt;30
-€&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;</p>
-<p>      &lt;tr&gt;&lt;th&gt;Redna cena&lt;/th&gt;&lt;td&gt;40
-€&lt;/td&gt;&lt;/tr&gt;</p>
-<p>      &lt;tr&gt;&lt;th&gt;Plačilni rok&lt;/th&gt;&lt;td&gt;30 dni
-od potrditve naročila&lt;/td&gt;&lt;/tr&gt;</p>
-<p>      &lt;tr&gt;&lt;th&gt;Dostava&lt;/th&gt;&lt;td&gt;osebni
-prevzem ali po pošti (+ poštnina)&lt;/td&gt;&lt;/tr&gt;</p>
-<p>    &lt;/table&gt;</p>
-<p>  &lt;/div&gt;</p>
-<p>&lt;/section&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>&lt;!-- FAQ --&gt;</p>
-<p>&lt;section id=&quot;faq&quot;&gt;</p>
-<p>  &lt;div class=&quot;vsebnik&quot;&gt;</p>
-<p>    &lt;h2&gt;Pogosta vprašanja&lt;/h2&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;div class=&quot;faq-vprasanje&quot;&gt;</p>
-<p>      &lt;h3&gt;Kdaj bom prejel knjigo?&lt;/h3&gt;</p>
-<p>      &lt;p&gt;Knjiga gre v tisk v dveh tednih in bo natisnjena
-pred koncem novembra 2026. Odprema sledi takoj po tisku —
-predvidoma v začetku decembra 2026.&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;div class=&quot;faq-vprasanje&quot;&gt;</p>
-<p>      &lt;h3&gt;Kdaj moram plačati?&lt;/h3&gt;</p>
-<p>      &lt;p&gt;Naročilo je zavezujoče. Račun prejmete po
-potrditvi naročila, rok plačila pa je &lt;strong&gt;30
-dni&lt;/strong&gt;. Če želite, lahko poravnate tudi takoj — s tem
-si zagotovite, da ne pozabite.&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;div class=&quot;faq-vprasanje&quot;&gt;</p>
-<p>      &lt;h3&gt;Zakaj je naklada omejena na 100 izvodov?&lt;/h3&gt;</p>
-<p>      &lt;p&gt;Knjiga izhaja v samozaložbi. Prva naklada je
-majhna, ker tisk v majhnih količinah ni poceni in ker želimo
-preveriti zanimanje pred morebitnim ponatisom. Če bo prva naklada
-razprodana, bo drugi natis sledil šele, ko bo dovolj povpraševanja
-— zato je zdaj najboljši trenutek za naročilo.&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;div class=&quot;faq-vprasanje&quot;&gt;</p>
-<p>      &lt;h3&gt;Ali lahko naročim več izvodov?&lt;/h3&gt;</p>
-<p>      &lt;p&gt;Da, največ 5 izvodov na naročnika, dokler je
-zaloga. Za večje količine (npr. za knjižnice, šole, društva) nas
-kontaktirajte.&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;div class=&quot;faq-vprasanje&quot;&gt;</p>
-<p>      &lt;h3&gt;Kaj če si premislim?&lt;/h3&gt;</p>
-<p>      &lt;p&gt;Naročilo je zavezujoče, a če knjiga ne bi izšla
-do 31. 12. 2026, vam plačilo vrnemo v celoti. Za druge primere se
-obrnite na nas — poskušali bomo najti rešitev.&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;div class=&quot;faq-vprasanje&quot;&gt;</p>
-<p>      &lt;h3&gt;Ali je knjiga na voljo v knjigarnah?&lt;/h3&gt;</p>
-<p>      &lt;p&gt;Ne. Knjiga izhaja v samozaložbi in je na voljo le
-prek te strani oziroma neposredno pri avtorju.&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;div class=&quot;faq-vprasanje&quot;&gt;</p>
-<p>      &lt;h3&gt;Kako lahko pomagam, če ne morem naročiti?&lt;/h3&gt;</p>
-<p>      &lt;p&gt;Delite povezavo do te strani z nekom, ki bi ga
-knjiga zanimala. Beseda od ust do ust je pri samozaložbi najmočnejša
-podpora.&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p>  &lt;/div&gt;</p>
-<p>&lt;/section&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>&lt;!-- OBRAZEC ZA NAROČILO --&gt;</p>
-<p>&lt;section id=&quot;narocilo&quot; class=&quot;obrazec-sekcija&quot;&gt;</p>
-<p>  &lt;div class=&quot;vsebnik&quot;&gt;</p>
-<p>    &lt;h2&gt;Naročilo prve naklade&lt;/h2&gt;</p>
-<p>    &lt;p&gt;Naročilo oddate prek spletnega obrazca. Izpolnite ga
-v nekaj minutah — plačilo sledi po potrditvi naročila z
-30-dnevnim rokom.&lt;/p&gt;</p>
-<p>    &lt;p class=&quot;poudarek&quot;&gt;Prva naklada: 100 izvodov.
-Do [datum] ali do razprodaje.&lt;/p&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;!-- SEM VSTAVI POVEZAVO DO OBRAZCA (Tally, Google Forms)
---&gt;</p>
-<p>    &lt;a href=&quot;[POVEZAVA_DO_OBRAZCA]&quot; class=&quot;gumb&quot;
-target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Odpri obrazec
-za naročilo&lt;/a&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>    &lt;p class=&quot;opomba&quot;&gt;Če raje naročite po
-e-pošti ali pošti, lahko izpolnjen PDF obrazec pošljete na
-&lt;strong&gt;[e-pošta]&lt;/strong&gt; ali na naslov &lt;strong&gt;[poštni
-naslov]&lt;/strong&gt;. PDF obrazec si lahko prenesete tukaj: &lt;a
-href=&quot;[POVEZAVA_DO_PDF]&quot; style=&quot;color:
-#6b1f2a;&quot;&gt;prenos PDF&lt;/a&gt;.&lt;/p&gt;</p>
-<p>  &lt;/div&gt;</p>
-<p>&lt;/section&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>&lt;!-- KONTAKT --&gt;</p>
-<p>&lt;section id=&quot;kontakt&quot;&gt;</p>
-<p>  &lt;div class=&quot;vsebnik&quot;&gt;</p>
-<p>    &lt;h2&gt;Kontakt&lt;/h2&gt;</p>
-<p>    &lt;p&gt;Za vprašanja, dodatne informacije ali večje
-količine:&lt;/p&gt;</p>
-<p>    &lt;div class=&quot;kontakt-podatki&quot;&gt;</p>
-<p>      &lt;p&gt;&lt;strong&gt;E-pošta:&lt;/strong&gt;
-[e-pošta]&lt;/p&gt;</p>
-<p>      &lt;p&gt;&lt;strong&gt;Telefon:&lt;/strong&gt; [telefon —
-neobvezno]&lt;/p&gt;</p>
-<p>      &lt;p&gt;&lt;strong&gt;Naslov:&lt;/strong&gt; [poštni
-naslov]&lt;/p&gt;</p>
-<p>    &lt;/div&gt;</p>
-<p>    &lt;p class=&quot;opomba&quot;&gt;Odgovarjamo v 24–48
-urah.&lt;/p&gt;</p>
-<p>  &lt;/div&gt;</p>
-<p>&lt;/section&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>&lt;!-- FOOTER --&gt;</p>
-<p>&lt;footer&gt;</p>
-<p>  &lt;p&gt;&lt;strong&gt;Kalki v slovenskem jeziku&lt;/strong&gt;
-· Bogdan Kristofer Meško · © 2026&lt;/p&gt;</p>
-<p>  &lt;p style=&quot;margin-top: 10px;&quot;&gt;&lt;a
-href=&quot;[POVEZAVA_DO_POLITIKE_ZASEBNOSTI]&quot;&gt;Politika
-zasebnosti&lt;/a&gt; · &lt;a href=&quot;[POVEZAVA_DO_POGOJEV]&quot;&gt;Pogoji
-naročila&lt;/a&gt;&lt;/p&gt;</p>
-<p>  &lt;p style=&quot;margin-top: 14px; font-size: 0.82rem;&quot;&gt;Spletna
-stran je nastala v samozaložbi. Hvala za vašo podporo.&lt;/p&gt;</p>
-<p>&lt;/footer&gt;</p>
-<p><br/>
-<br/>
-
-</p>
-<p>&lt;/body&gt;</p>
-<p>&lt;/html&gt;</p>
 </body>
 </html>
